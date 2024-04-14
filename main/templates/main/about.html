@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #808080;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0 auto; 
+            padding: 0;
+            display: inline-block; 
+        }
+
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        section {
+            text-align: center;
+            margin: auto;
+            width: 50%; /* Adjust as needed */
+            margin-top: 10%;
+        }
+
+        .center {
+            text-align: center;
+            margin: auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.7); /* Background with 70% opacity */
+            padding: 20px; /* Add some padding for spacing */
+            border-radius: 10px; /* Rounded corners */
+            margin-left: 23%;
+        }
+
+
+        form {
+            display: inline-block;
+            text-align: left; /* Adjust if needed */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Hi I am Aarya Jamwal</h1>
+        <p>This site let's you extract info from documents like email, number and other text.</p>
+        <ul>
+            <button><a href="https://in.linkedin.com/in/aarya-jamwal" target="_blank">LinkedIn</a></button>
+            <button><a href="https://github.com/ErebusAJ" target="_blank" >GitHub</a></button>
+            <button><a href="https://aaryajamwal.great-site.net/?i=1" target="_blank" >Portfolio</a></button>
+        </ul>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Extractor. All rights reserved.</p>
+        <p>Aarya Jamwal</p>
+    </footer>
+</body>
+</html>

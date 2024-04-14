@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #808080;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0 auto; 
+            padding: 0;
+            display: inline-block; 
+        }
+
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        section {
+            text-align: center;
+            margin: auto;
+            width: 50%; /* Adjust as needed */
+            margin-top: 10%;
+        }
+
+        .center {
+            text-align: center;
+            margin: auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.7); /* Background with 70% opacity */
+            padding: 20px; /* Add some padding for spacing */
+            border-radius: 10px; /* Rounded corners */
+            margin-left: 23%;
+        }
+
+
+        form {
+            display: inline-block;
+            text-align: left; /* Adjust if needed */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Welcome to Extractor</h1>
+        <p>Extract contents of your document here</p>
+    </section>
+    <form method="post" enctype="multipart/form-data" class="center">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Document</button>
+    </form>    
+
+    <footer>
+        <p>&copy; 2024 Extractor. All rights reserved.</p>
+        <p>Aarya Jamwal</p>
+    </footer>
+</body>
+</html>
